@@ -10,3 +10,9 @@ st.write("Verb")
 verbs_df = pd.read_csv('data/100verbs.csv', sep=',')
 verbs_df.index += 1
 st.dataframe(verbs_df)
+
+
+#Sidebar
+st.sidebar.page_link('1_Casa.py', label='Casa')
+st.sidebar.page_link('pages/verb.py', label='100 mest brukte verb')
+st.sidebar.page_link('pages/2_Sah_Dude.py', label='Suhdude')
