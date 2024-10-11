@@ -7,10 +7,20 @@ st.set_page_config(
 )
 st.write("Verb")
 
-verbs_df = pd.read_csv('data/verbs.csv', sep=',')
+colnames = ['Verb', 'Oversettelse', 'Link']
+verbs_df = pd.read_csv('data/verbs.csv', sep=',', names =colnames, header=None)
 verbs_df.index += 1
-st.dataframe(verbs_df)
 
+st.data_editor(
+    verbs_df,
+    column_config={
+        'Link': st.column_config.LinkColumn(
+            'Bøyning', display_text='clicky'
+        ),
+    },
+    hide_index=True,
+)
+#st.dataframe(verbs_df.style.format({'Links': lambda x: f'<a href="{x}">Link</a>'}), escape_html=False)
 
 #Sidebar
 st.sidebar.page_link('1_Casa.py', label='Casa')
