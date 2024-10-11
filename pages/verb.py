@@ -7,7 +7,7 @@ st.set_page_config(
 )
 st.write("Verb")
 
-verbs_df = pd.read_csv('data/100verbs.csv', sep=',')
+verbs_df = pd.read_csv('data/verbs.csv', sep=',')
 verbs_df.index += 1
 st.dataframe(verbs_df)
 
