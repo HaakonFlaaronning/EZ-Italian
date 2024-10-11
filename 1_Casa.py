@@ -13,3 +13,7 @@ st.write("# EZ Italian 😃")
 common_words_df = pd.read_csv('data/common_words.csv', sep=',')
 common_words_df.index += 1
 st.dataframe(common_words_df)
+
+indirect_pronouns_df = pd.read_csv('data/indirect_pronouns.csv', sep='|')
+indirect_pronouns_df.index +=1
+st.dataframe(indirect_pronouns_df)
