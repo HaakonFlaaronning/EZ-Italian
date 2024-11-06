@@ -1,12 +1,6 @@
 import streamlit as st
 import pandas as pd
 
-pd.set_option('display.max_column', None)
-pd.set_option('display.max_rows', None)
-pd.set_option('display.max_seq_items', None)
-pd.set_option('display.max_colwidth', 500)
-pd.set_option('expand_frame_repr', True)
-
 st.set_page_config(
   page_title = 'EZ Italian',
   page_icon = '✅',
