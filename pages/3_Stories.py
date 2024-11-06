@@ -3,7 +3,7 @@ import pandas as pd
 
 st.set_page_config(
   page_title = 'Historier',
-  page_icon = '✅',
+  page_icon = '🐲',
   layout = 'wide'
 )
 
@@ -22,7 +22,7 @@ it_three_little_piggies, no_three_little_piggies = three_little_piggies.split(';
 st.write("# Historier")
 
 # De 3 små grisene
-with st.expander("# De 3 små grisene"):
+with st.expander("# De 3 små grisene 🐷"):
   # Button to show/hide translation
   st.button("Vis/Gjem oversettelse", on_click=toggle_translation)
   

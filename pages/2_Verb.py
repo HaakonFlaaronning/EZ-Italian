@@ -3,9 +3,10 @@ import pandas as pd
 
 st.set_page_config(
     page_title = '100 Mest brukte verb',
+    page_icon='📚',
     layout ='wide'
 )
-st.write("# Verb")
+st.write("# Verb 📚")
 
 # Load data
 verbs_df = pd.read_csv('data/verbs.csv', sep=',')
