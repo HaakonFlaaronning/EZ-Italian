@@ -1,12 +1,6 @@
 import streamlit as st
 import pandas as pd
 
-pd.set_option('display.max_column', None)
-pd.set_option('display.max_rows', None)
-pd.set_option('display.max_seq_items', None)
-pd.set_option('display.max_colwidth', 500)
-pd.set_option('expand_frame_repr', True)
-
 st.set_page_config(
     page_title = '100 Mest brukte verb',
     layout ='wide'
@@ -18,6 +12,7 @@ verbs_df = pd.read_csv('data/verbs.csv', sep=',')
 verbs_df.index += 1
 
 irr_verbs_df = pd.read_csv('data/irregular_verbs.csv', sep=';')
+reflexive_verbs_df = pd.read_csv('data/reflexive_verbs.csv', sep=';')
 
 # The most common 100 verbs
 with st.expander("# De mest brukte 100 verbene"):
@@ -40,3 +35,7 @@ with st.expander("# Uregelmessige verb"):
     st.dataframe(irr_verbs_df.iloc[first_third:second_third], use_container_width=True, height=35*first_third+38)
   with col3:
     st.dataframe(irr_verbs_df.iloc[second_third:], use_container_width=True, height=35*first_third+38)
+
+# Reflexive verbs
+with st.expander("Refleksive verb"):
+  st.dataframe(reflexive_verbs_df, use_container_width=True, height=35*len(reflexive_verbs_df)+38, hide_index=True)
