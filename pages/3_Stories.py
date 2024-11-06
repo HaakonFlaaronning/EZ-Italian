@@ -19,7 +19,7 @@ with open('stories/three_little_piggies.txt', encoding='utf-8') as f:
   three_little_piggies = f.read()
 it_three_little_piggies, no_three_little_piggies = three_little_piggies.split(';;;')
 
-st.write("# Historier")
+st.write("# Historier 🐲")
 
 # De 3 små grisene
 with st.expander("# De 3 små grisene 🐷"):
