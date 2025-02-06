@@ -1,5 +1,10 @@
 import streamlit as st
 import pandas as pd
+import nltk
+from nltk.tokenize import sent_tokenize
+
+nltk.download('punkt')
+nltk.download('punkt_tab')
 
 st.set_page_config(
   page_title = 'EZ Italian',
@@ -8,6 +13,9 @@ st.set_page_config(
 )
 
 st.write("# EZ Italian 😃")
+
+sen = sent_tokenize("test. ok.")
+st.write(sen)
 
 # Load data
 common_words_df = pd.read_csv('data/common_words.csv', sep=';')

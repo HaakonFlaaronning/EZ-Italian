@@ -15,7 +15,7 @@ def toggle_translation():
     st.session_state.show_translation = not st.session_state.show_translation
 
 # Load stories
-with open('stories/three_little_piggies.txt', encoding='utf-8') as f:
+with open('stories/0_three_little_piggies.txt', encoding='utf-8') as f:
   three_little_piggies = f.read()
 it_three_little_piggies, no_three_little_piggies = three_little_piggies.split(';;;')
 
