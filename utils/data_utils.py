@@ -1,5 +1,6 @@
 import pandas as pd
 import numpy as np
+import streamlit as st
 
 def find_sentence_for_words(words_df, stories):
   # Iterate through words df
@@ -13,7 +14,6 @@ def find_sentence_for_words(words_df, stories):
     # Get sentence from stories
     sentence = stories[int(story_num)][int(sent_num)]
     words_df.at[i, 'Sentence'] = sentence
-    print(sentence)
   return words_df
     
     

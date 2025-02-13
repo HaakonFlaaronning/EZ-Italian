@@ -25,7 +25,9 @@ stories = [None] * num_stories
 for file in os.listdir('./stories'):
   story_num = int(file.split('_')[0])
   with open(f'stories/{file}', encoding='utf-8') as f:
-    stories[story_num] = sent_tokenize(f.read())
+    story = f.read()
+    story = story.replace('\n', ' ').replace('”', '').replace('“', '')
+    stories[story_num] = sent_tokenize(story)
 
 common_words_df = find_sentence_for_words(common_words_df, stories)
 common_words_df_to_display = common_words_df[['Word', 'Translation', 'Sentence']]
